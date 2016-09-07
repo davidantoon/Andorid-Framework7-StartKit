@@ -20,7 +20,10 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setAllowFileAccessFromFileURLs(true);
         webSettings.setAllowUniversalAccessFromFileURLs(true);
         webSettings.setDatabaseEnabled(true);
-        WebView.setWebContentsDebuggingEnabled(true);
         myWebView.loadUrl("file:///android_asset/index.html");
+
+        // This line enable webview inspect from chrome while debugging.
+        // open chrome -> go to "chrome://inspect" -> connect your device and debug.
+        WebView.setWebContentsDebuggingEnabled(true);
     }
 }
